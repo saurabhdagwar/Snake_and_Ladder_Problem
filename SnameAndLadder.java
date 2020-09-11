@@ -39,7 +39,7 @@ class SnakeAndLadder
 			//		 System.out.println("No Play");
 			}
 //UC5 Player reaches at exact winning position 
-			System.out.print(" "+current_position);
+			System.out.println("Dice : "+DICE+" | Current Position : "+current_position);
 
 		}
 		System.out.println(" ");
