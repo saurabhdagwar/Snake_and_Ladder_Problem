@@ -43,7 +43,7 @@ class SnakeAndLadder
 					task = "noPlay";
 			//		 System.out.println("No Play");
 			}
-			System.out.println(" | Dice: "+DICE+" for "+task+" *:"+current_position+"| ");
+			System.out.println(" | Dice: "+DICE+" for "+task+" and Current Position : "+current_position+"| ");
 		}
 		System.out.println(" ");
 //UC6 total times dice throws
