@@ -56,4 +56,3 @@ class SnakeAndLadder
 		Player.GamePlayed();
 	}
 }
-
