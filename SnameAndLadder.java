@@ -9,7 +9,7 @@ class SnakeAndLadder {
 	static final int NOPLAY = 0;
 	static String TASK ;
 
-	public int GamePlayed(int current_position)
+	public int GamePlayed(int current_position, int player, int DiceCount)
 	{
 //UC2 Initializing Rolling Dice
 		if( current_position < ENDING_POSITION )
@@ -44,17 +44,36 @@ class SnakeAndLadder {
 	
 		if(TASK == "Ladder" && current_position != ENDING_POSITION)
 		{
-			GamePlayed(current_position);
-		}
+			if(player == 1)
+			{
+				dice_Player1(DiceCount);
+				GamePlayed(current_position,player,DiceCount);
+			}
+			else if(player == 2)
+			{
+				dice_Player2(DiceCount);
+				 GamePlayed(current_position,player,DiceCount);
+
+			}
+
+		
+				}
 	return current_position;
 	}
-/*
-	public int LadderRepeatation(int current_position)
+
+
+	public int dice_Player2(int diceCount)
 	{
-		int  LadderPlay = GamePlayed(current_position);
-		return LadderPlay;
+		diceCount++;
+		return diceCount;
 	}
-*/
+
+	public int dice_Player1(int diceCount)
+	{
+		diceCount++;
+		return diceCount;
+	}
+
 	public void TwoPlayers()
 	{
 		int Player1_position = STARTING_POSITION ;
@@ -66,11 +85,11 @@ class SnakeAndLadder {
 		{
 
 			System.out.println("Player 1 :-  ");
-			Player1_position = GamePlayed(Player1_position);
-			dice_count_Player1++;
+			Player1_position = GamePlayed(Player1_position,1,dice_count_Player1);
+			dice_count_Player1 = dice_Player1(dice_count_Player1);
 			System.out.println("Player 2 :-  ");
-			Player2_position = GamePlayed(Player2_position);
-			dice_count_Player2++;
+			Player2_position = GamePlayed(Player2_position,2,dice_count_Player2);
+			dice_count_Player2 = dice_Player2(dice_count_Player2);
 		}
 
 		if(Player1_position == ENDING_POSITION)
@@ -83,6 +102,7 @@ class SnakeAndLadder {
 			System.out.println();
 			System.out.println("Player 2 Won The Match ");
 		}
+//		System.out.println("Dice Count Player 1 : "+dice_count_Player1+" Dice Count Player 2 : "+dice_count_Player2);
 	} 
 
 	public static void main(String args[])
