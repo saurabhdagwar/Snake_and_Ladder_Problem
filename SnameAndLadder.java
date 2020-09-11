@@ -10,6 +10,7 @@ class SnakeAndLadder
 //UC2 Initializing Rolling Dice
 		Random random = new Random();
 		int current_position = STARTING_POSITION ;
+
 // UC4 while loop for repet till player won
 		System.out.println("Game Played by the player");
 		System.out.println(" ");
@@ -37,6 +38,7 @@ class SnakeAndLadder
 			{
 			//		 System.out.println("No Play");
 			}
+//UC5 Player reaches at exact winning position 
 			System.out.print(" "+current_position);
 
 		}
