@@ -16,13 +16,13 @@ class SnakeAndLadder
 		current_position = STARTING_POSITION;
 		System.out.println("Rolling Dice : "+DICE);
 		System.out.println("Action perform :"+action);
-		if(action == 1 && (current_position + DICE != ENDING_POSITION))
+		if(action == 1 && (current_position + DICE <= ENDING_POSITION))
 		{
 
 				current_position = current_position + DICE;
 				System.out.println("Player moves for Ladder");
 		}
-		else if(action == 2 && (current_position - DICE != STARTING_POSITION))
+		else if(action == 2 && (current_position - DICE >= STARTING_POSITION))
 		{
 
 				current_position = current_position - DICE;
