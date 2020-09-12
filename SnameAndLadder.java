@@ -1,5 +1,4 @@
-import java.util.*;
-class SnakeAndLadder {
+import java.util.*; class SnakeAndLadder {
 //UC1 Initializing Starting position of game
 	static final int STARTING_POSITION = 0;
 	static final int ENDING_POSITION = 100;
@@ -38,6 +37,7 @@ class SnakeAndLadder {
 				}
 				break;
 				case NOPLAY:
+				current_position = current_position;
 				TASK = "noPlay";
 				break;
 			}
@@ -52,29 +52,32 @@ class SnakeAndLadder {
 		return current_position;
 	}
 
-// Dice increment after every dice roll
+// Dice count increment after every rolling dice
 	public int dice_Player(int diceCount)
 	{
 		diceCount++;
 		return diceCount;
 	}
 
-//UC7 Game played for two players at a time
+// Game played by two players
 	public void TwoPlayers()
 	{
 		int Player1_position = STARTING_POSITION ;
 		int Player2_position = STARTING_POSITION ;
 		int dice_count = STARTING_POSITION ;
 
-		System.out.println("Game Played by the player");
+		System.out.println("Game Started by two player");
 
 		while( Player1_position < ENDING_POSITION && Player2_position < ENDING_POSITION )
 		{
 			System.out.println("Player 1 :-  ");
 			Player1_position = GamePlayed(Player1_position,dice_count);
+			dice_count = dice_Player(dice_count);
+			System.out.println("-------------------------------------------------------------------------------------------------- ");
 			System.out.println("Player 2 :-  ");
 			Player2_position = GamePlayed(Player2_position,dice_count);
 			dice_count = dice_Player(dice_count);
+			System.out.println("---------------------------------------------------------------------------------------------------");
 		}
 
 		if(Player1_position == ENDING_POSITION)
