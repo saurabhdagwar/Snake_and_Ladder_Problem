@@ -74,6 +74,10 @@ import java.util.*; class SnakeAndLadder {
 			Player1_position = GamePlayed(Player1_position,dice_count);
 			dice_count = dice_Player(dice_count);
 			System.out.println("-------------------------------------------------------------------------------------------------- ");
+			if(Player1_position == ENDING_POSITION)
+			{
+				break;
+			}
 			System.out.println("Player 2 :-  ");
 			Player2_position = GamePlayed(Player2_position,dice_count);
 			dice_count = dice_Player(dice_count);
