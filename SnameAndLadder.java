@@ -52,14 +52,14 @@ class SnakeAndLadder {
 		return current_position;
 	}
 
-
+// Dice count increment after every rolling dice
 	public int dice_Player(int diceCount)
 	{
 		diceCount++;
 		return diceCount;
 	}
 
-
+// Game played by two players
 	public void TwoPlayers()
 	{
 		int Player1_position = STARTING_POSITION ;
