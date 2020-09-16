@@ -16,7 +16,6 @@ class SnakeAndLadder {
 		if( currentPosition < ENDINGPOSITION )
 		{
 			int DICE = (RANDOM.nextInt(6)+1);
-		//	total_dice_count++;
 //UC3 defining Snake, Ladder or no play
 			int action = RANDOM.nextInt(3);
 			switch(action)
