@@ -2,10 +2,10 @@ import java.util.*;
 class SnakeAndLadder
 {
 //UC1 Initializing Starting position of game
-	static final int  STARTING_POSITION = 0;
-	static final int	ENDING_POSITION = 100;
+	static final int STARTINGPOSITION = 0;
+	static final int ENDINGPOSITION = 100;
 
-	public void Rolling_Dice()
+	public void RollingDice()
 	{
 		Random random = new Random();
 		int DICE = (random.nextInt(6)+1);
@@ -15,6 +15,6 @@ class SnakeAndLadder
 	public static void main(String args[])
 	{
 		SnakeAndLadder Game1 = new SnakeAndLadder();
-		Game1.Rolling_Dice();
+		Game1.RollingDice();
 	}
 }
